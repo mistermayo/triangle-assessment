@@ -1,8 +1,6 @@
-var triangle = function(numbers) {
-  var length1 = numbers[0];
-  var length2 = numbers[1];
-  var length3 = numbers[2];
+var triangle = function(length1, length2, length3) {
   var triangle = [];
+
 
     if (length1 === length2 && length2 === length3) {
 
@@ -17,28 +15,20 @@ var triangle = function(numbers) {
 
           triangle = "scalene"
     };
-    return triangle;
+
+  return triangle;
+
 };
 
+
 $(document).ready(function() {
-
   $("form#triangle").submit(function(event) {
+    var length1 = parseInt($("input#length1").val());
+    var length2 = parseInt($("input#length2").val());
+    var length3 = parseInt($("input#length3").val());
+    var result = triangle(length1, length2, length3);
 
-    $("#triangle-result").text("");
-    $("#result").hide();
-    $("#error").hide();
-
-    var numbers = parseInt($("input#numbers").val());
-    var result = triangle(result)
-
-    $("#triangle-result").text(triangle);
-
-    if (isNaN(numbers) || numbers < 0 ) {
-      $("#error").show();
-    } else {
-      $("#result").show();
-    };
-
+    $(".result").text(result);
     event.preventDefault();
   });
 });

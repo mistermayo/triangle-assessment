@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script src="js/jquery-1.11.2.js"></script>
-  <script src="js/scripts.js"></script>
-  <title>Triangle Fun!</title>
-</head>
-<body>
-  <div class="container">
-    <h1>Triangle Fun!</h1>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Triangle Fun!</title>
+  </head>
 
-    <form id="triangle">
-      <div class="form-group">
-        <label for="numbers">Enter three numbers to find out what type of triangle they make:</label>
-        <input id="numbers" type="text">
+  <body>
+
+    <div class="container">
+      <h1>What kind of triangle are you???</h1>
+
+      <form id ="triangle">
+
+        <div class ="form-group">
+          <label for="length1">First number:</label>
+          <input id ="length1" type="text">
+
+          <label for="length2">First number:</label>
+          <input id ="length2" type="text">
+
+          <label for="length3">First number:</label>
+          <input id ="length3" type="text">
+        </div>
+
+        <button type="submit" class="btn">Triangulator!</button>
+
+      </form>
+
+      <div id="result">
+        <ul><span class="result"></span></ul>
       </div>
 
-      <button type="submit" class="btn">Triangulous</button>
-    </form>
-
-    <div id="result">
-      <p>Your Triangle is: <span id="triangle-result"></span>.</p>
     </div>
-
-    <div id="error">
-      <p>Please enter valid numbers!</p>
-    </div>
-
-  </div>
-</body>
+  </body>
 </html>
