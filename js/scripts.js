@@ -1,7 +1,6 @@
 var triangle = function(length1, length2, length3) {
   var triangle = [];
 
-
     if (length1 === length2 && length2 === length3) {
 
           triangle = "equilateral"
