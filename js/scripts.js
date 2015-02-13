@@ -19,3 +19,26 @@ var triangle = function(numbers) {
     };
     return triangle;
 };
+
+$(document).ready(function() {
+
+  $("form#triangle").submit(function(event) {
+
+    $("#triangle-result").text("");
+    $("#result").hide();
+    $("#error").hide();
+
+    var numbers = parseInt($("input#numbers").val());
+    var result = triangle(result)
+
+    $("#triangle-result").text(triangle);
+
+    if (isNaN(numbers) || numbers < 0 ) {
+      $("#error").show();
+    } else {
+      $("#result").show();
+    };
+
+    event.preventDefault();
+  });
+});
